@@ -10,7 +10,7 @@ describe MusiciansController do
 				visit new_musician_path
 			end
 			it "creates a musician from a form" do
-				fill_in :name, with: @name
+				fill_in "musician_name", with: @name
 				click_button "submit"
 				current_path.should == musicians_path
 				page.should have_content(@name)
