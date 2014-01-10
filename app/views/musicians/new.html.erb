@@ -3,3 +3,20 @@
 	<input type="text" name="name">
 	<input type="submit" id="submit">
 </form>
+
+
+
+<%= form_tag("/musicians", method: "post") do %> 
+	<%= label_tag(:name, "Name:") %>
+	<%= text_field_tag(:name) %> 
+	<%= submit_tag("Create Musician One") %>
+<% end %>
+
+
+<%= form_for @musician do |f| %> 
+	<%= f.label :name, 'Name'%>:
+	<%= f.text_field :name %><br />
+	<%= f.submit("Create Musician One") %>
+<% end %>
+
+

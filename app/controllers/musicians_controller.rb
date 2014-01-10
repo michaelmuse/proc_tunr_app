@@ -1,8 +1,10 @@
 class MusiciansController < ApplicationController
-	def new; end
+	def new
+		@musician = Musician.new
+	end
 
 	def create
-		name = params[:name]
+		name = params[:name] || params[:musician][:name]
 		Musician.create(name: name)
 		redirect_to musicians_path
 	end

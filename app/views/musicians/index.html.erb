@@ -1,3 +1,10 @@
-<% @musicians.each do |musician|  %>
-	<h1><%= musician.name %></h1>
-<% end %>
+<table>
+	<% @musicians.each do |musician|  %>
+	<tr>
+		<td><%= musician.name %></td>
+		<td>SHOW</td>
+		<td>EDIT</td>
+		<td>DELETE</td>
+	</tr>
+	<% end %>
+</table>
